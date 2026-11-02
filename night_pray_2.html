@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101923">
+  <meta name="description" content="План ночной молитвы для лидеров молодёжного служения. Тема: Богоискание. 3–4 ноября 2026 года.">
+  <title>Ночная молитва — Богоискание</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101923;
+      --card: rgba(25, 39, 52, .9);
+      --line: rgba(220, 232, 238, .11);
+      --text: #f2f4f2;
+      --muted: #aab8c1;
+      --gold: #d8b779;
+      --blue: #8db8c8;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(0, 0, 0, .18)
+    }
+    
+    * {
+      box-sizing: border-box
+    }
+    
+    html {
+      scroll-behavior: smooth
+    }
+    
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(ellipse at 50% -15%, rgba(100, 145, 164, .2), transparent 42rem), linear-gradient(180deg, #101923 0%, #121e29 48%, #0e1720 100%);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased
+    }
+    
+    .page {
+      width: min(100% - 40px, 900px);
+      margin: 0 auto;
+      padding: 42px 0 64px
+    }
+    
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 58px);
+      border: 1px solid rgba(216, 183, 121, .22);
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgba(31, 52, 66, .96), rgba(17, 29, 40, .96));
+      box-shadow: var(--shadow);
+      text-align: center
+    }
+    
+    .hero:before,
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border: 1px solid rgba(216, 183, 121, .13);
+      border-radius: 50%;
+      pointer-events: none
+    }
+    
+    .hero:before {
+      top: -120px;
+      left: -90px
+    }
+    
+    .hero:after {
+      right: -100px;
+      bottom: -135px;
+      width: 250px;
+      height: 250px
+    }
+    
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase
+    }
+    
+    h1 {
+      position: relative;
+      margin: 0;
+      font-size: clamp(2.25rem, 8vw, 4.2rem);
+      font-weight: 500;
+      letter-spacing: .035em;
+      line-height: 1.08
+    }
+    
+    .hero-subtitle {
+      margin: 15px 0 0;
+      color: #c4d0d5;
+      font-size: clamp(.95rem, 2.5vw, 1.1rem)
+    }
+    
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 26px
+    }
+    
+    .meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(8, 17, 25, .28);
+      color: #e3e8e8;
+      font-size: .88rem
+    }
+    
+    .meta b {
+      color: var(--gold);
+      font-weight: 650
+    }
+    
+    .intro {
+      margin: 22px 0 30px;
+      padding: 23px 25px;
+      border-left: 3px solid var(--gold);
+      border-radius: 0 14px 14px 0;
+      background: rgba(216, 183, 121, .07)
+    }
+    
+    .intro p {
+      margin: 0
+    }
+    
+    .intro p+p {
+      margin-top: 9px;
+      color: var(--muted)
+    }
+    
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 38px 0 16px
+    }
+    
+    .section-heading:before {
+      content: "";
+      width: 25px;
+      height: 1px;
+      background: var(--gold);
+      flex: 0 0 auto
+    }
+    
+    .section-heading h2 {
+      margin: 0;
+      color: var(--gold);
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .17em;
+      text-transform: uppercase
+    }
+    
+    .schedule {
+      display: grid;
+      gap: 13px
+    }
+    
+    .item {
+      display: grid;
+      grid-template-columns: 126px minmax(0, 1fr);
+      gap: 18px;
+      padding: 21px 23px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, .1)
+    }
+    
+    .time {
+      padding-top: 2px;
+      color: var(--gold);
+      font-size: .9rem;
+      font-weight: 750;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap
+    }
+    
+    .item h3 {
+      margin: 0 0 8px;
+      color: var(--text);
+      font-size: 1.08rem;
+      line-height: 1.35
+    }
+    
+    .item p {
+      margin: 6px 0;
+      color: var(--muted)
+    }
+    
+    .item ul {
+      margin: 9px 0 0;
+      padding-left: 19px;
+      color: #c5d0d5
+    }
+    
+    .item li {
+      margin: 4px 0;
+      padding-left: 2px
+    }
+    
+    .item .note {
+      margin-top: 12px;
+      padding: 10px 13px;
+      border-radius: 10px;
+      background: rgba(141, 184, 200, .08);
+      color: #b9d0d9;
+      font-size: .92rem
+    }
+    
+    .item.featured {
+      border-color: rgba(216, 183, 121, .28);
+      background: linear-gradient(135deg, rgba(42, 54, 61, .96), rgba(25, 39, 52, .96))
+    }
+    
+    .scripture {
+      display: inline-block;
+      margin: 3px 0;
+      color: var(--gold);
+      font-weight: 650
+    }
+    
+    .closing {
+      margin-top: 30px;
+      padding: 25px;
+      border: 1px solid rgba(216, 183, 121, .2);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(216, 183, 121, .1), rgba(216, 183, 121, .035));
+      text-align: center
+    }
+    
+    .closing blockquote {
+      margin: 0;
+      color: #f0e5cf;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.15rem, 3.5vw, 1.55rem);
+      line-height: 1.5
+    }
+    
+    .closing cite {
+      display: block;
+      margin-top: 12px;
+      color: var(--gold);
+      font-size: .9rem;
+      font-style: normal
+    }
+    
+    footer {
+      padding-top: 25px;
+      color: #81919a;
+      font-size: .8rem;
+      text-align: center
+    }
+    
+    @media(max-width:600px) {
+      .page {
+        width: min(100% - 28px, 900px);
+        padding: 18px 0 38px
+      }
+      .hero {
+        border-radius: 20px
+      }
+      .meta {
+        gap: 7px
+      }
+      .meta span {
+        padding: 7px 10px;
+        font-size: .8rem
+      }
+      .intro {
+        padding: 18px;
+        margin: 16px 0 24px
+      }
+      .section-heading {
+        margin-top: 30px
+      }
+      .item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 18px
+      }
+      .time {
+        font-size: .82rem
+      }
+      .item h3 {
+        font-size: 1.02rem
+      }
+    }
+    
+    @media(max-width:360px) {
+      .page {
+        width: calc(100% - 20px);
+        padding-top: 10px
+      }
+      .hero {
+        padding: 27px 16px
+      }
+      .eyebrow {
+        font-size: .68rem;
+        letter-spacing: .16em
+      }
+      h1 {
+        font-size: 2.05rem
+      }
+      .hero-subtitle {
+        font-size: .9rem
+      }
+      .meta {
+        flex-direction: column;
+        align-items: stretch
+      }
+      .meta span {
+        justify-content: center
+      }
+      .item {
+        padding: 15px;
+        border-radius: 14px
+      }
+      .item ul {
+        padding-left: 17px
+      }
+      .closing {
+        padding: 20px 15px
+      }
+    }
+    
+    @media print {
+      :root {
+        color-scheme: light
+      }
+      body {
+        background: #fff;
+        color: #222
+      }
+      .page {
+        width: 100%;
+        padding: 0
+      }
+      .hero,
+      .item,
+      .closing,
+      .intro {
+        box-shadow: none;
+        break-inside: avoid
+      }
+      .hero {
+        background: #f2f4f5;
+        color: #17232b
+      }
+      h1,
+      .item h3,
+      .item p,
+      .item ul,
+      .intro p {
+        color: #222
+      }
+      .item {
+        background: #fff;
+        border-color: #ddd
+      }
+      .time,
+      .section-heading h2,
+      .scripture,
+      .closing cite {
+        color: #80643a
+      }
+      .closing {
+        background: #f8f5ee
+      }
+      .closing blockquote {
+        color: #333
+      }
+      footer {
+        color: #666
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Молодёжное служение · для лидеров</p>
+      <h1>Ночная молитва</h1>
+      <p class="hero-subtitle">Время искать Бога всем сердцем</p>
+      <div class="meta"><span>◷ <b>22:00–01:00</b></span><span>✦ <b>3–4 ноября 2026</b></span><span>Тема: <b>Богоискание</b></span></div>
+    </header>
+    <section class="intro" aria-label="Главная идея">
+      <p><strong>Главная мысль:</strong> искать не просто Божьей помощи, ответов или переживаний, а Самого Бога.</p>
+      <p>Мы собрались не просто провести время вместе, а посвятить эту ночь поклонению, Слову Божьему и молитве.</p>
+    </section>
+    <div class="section-heading">
+      <h2>План ночи</h2></div>
+    <section class="schedule" aria-label="Расписание ночной молитвы">
+      <article class="item">
+        <div class="time">22:00–22:15</div>
+        <div>
+          <h3>Открытие</h3>
+          <ul>
+            <li>Приветствие и вступительное слово.</li>
+            <li>Объяснение главной темы ночи.</li>
+            <li>Почему мы сегодня собрались?</li>
+            <li>Настрой на молитву и поклонение.</li>
+          </ul>
+          <p class="note">Мы пришли не просто провести время, а искать Бога.</p>
+        </div>
+      </article>
+      <article class="item">
+        <div class="time">22:15–22:40</div>
+        <div>
+          <h3>Прославление</h3>
+          <ul>
+            <li>Поклонение Богу и благодарность.</li>
+            <li>Молитва о жажде Божьего присутствия.</li>
+            <li>Личное посвящение Господу.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="item featured">
+        <div class="time">22:40–23:10</div>
+        <div>
+          <h3>Молитва №1. Жажда Бога и личные отношения с Ним</h3>
+          <ul>
+            <li>Есть ли у меня настоящая жажда Бога?</li>
+            <li>Не заменили ли другие вещи моё общение с Господом?</li>
+            <li>Искать Бога не только в трудностях, но и в повседневной жизни.</li>
+            <li>Развитие личной молитвенной жизни.</li>
+            <li>Любовь к Слову Божьему.</li>
+          </ul>
+          <p class="note">Время личной молитвы, тишины и размышления.</p>
+        </div>
+      </article>
+      <article class="item featured">
+        <div class="time">23:10–23:35</div>
+        <div>
+          <h3>Изучение темы. Что значит искать Бога?</h3>
+          <p><strong>Библейские тексты:</strong></p>
+          <ul>
+            <li><span class="scripture">Иеремия 29:11–13</span> — искать Бога всем сердцем.</li>
+            <li><span class="scripture">Псалом 62:2–9</span> — жажда Бога.</li>
+            <li><span class="scripture">Матфея 6:31–33</span> — прежде всего искать Царства Божьего.</li>
+          </ul>
+          <p><strong>Вопросы для обсуждения:</strong></p>
+          <ul>
+            <li>Что значит искать Бога на практике?</li>
+            <li>Можно ли искать Божьи благословения, но при этом не искать Самого Бога?</li>
+            <li>Что чаще всего мешает нам искать Господа?</li>
+            <li>Как сделать богоискание частью повседневной жизни?</li>
+          </ul>
+          <p class="note">Как вариант 10–12 минут размышления и остальное время — обсуждение.</p>
+        </div>
+      </article>
+      <article class="item">
+        <div class="time">23:35–23:50</div>
+        <div>
+          <h3>Чтение Писания</h3>
+          <p><span class="scripture">Псалом 62</span></p>
+          <ul>
+            <li>Совместное чтение псалма.</li>
+            <li>Жажда Бога, стремление к Нему и близость с Господом.</li>
+            <li>Короткое личное размышление после чтения.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="item">
+        <div class="time">23:50–00:10</div>
+        <div>
+          <h3>Прославление</h3>
+          <ul>
+            <li>Песни о посвящении и близости с Богом.</li>
+            <li>Поклонение и личный отклик на прочитанное Слово. Если кто-то захочет, то может поделиться полученным</li>
+          </ul>
+        </div>
+      </article>
+      <article class="item featured">
+        <div class="time">00:10–00:35</div>
+        <div>
+          <h3>Молитва №2. Очищение сердца и посвящение</h3>
+          <ul>
+            <li>Покаяние и исповедание грехов.</li>
+            <li>Освобождение от того, что отвлекает от Бога.</li>
+            <li>Проверка собственных мотивов.</li>
+            <li>Посвящение своей жизни Господу.</li>
+            <li>Желание жить в святости и послушании.</li>
+          </ul>
+          <p class="note">Не просто просить Бога что-то изменить вокруг нас, но позволить Ему менять нас.</p>
+        </div>
+      </article>
+      <article class="item">
+        <div class="time">00:35–00:50</div>
+        <div>
+          <h3>Чтение Писания</h3>
+          <p><span class="scripture">Матфея 6:25–34</span></p>
+          <ul>
+            <li>Особенное внимание — стиху 33: «Ищите же прежде Царства Божия и правды Его».</li>
+            <li>Несколько человек могут прочитать текст по очереди.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="item featured">
+        <div class="time">00:50–01:00</div>
+        <div>
+          <h3>Молитва №3. Церковь и молодёжь</h3>
+          <ul>
+            <li>Жажда Бога в нашей церкви.</li>
+            <li>Духовное пробуждение молодёжи.</li>
+            <li>Возрастание в вере.</li>
+            <li>Искренность и посвящение служителей.</li>
+            <li>Чтобы наше служение исходило из отношений с Богом, а не из привычки.</li>
+            <li>Молитва друг за друга и общая заключительная молитва.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <section class="closing">
+      <blockquote>«И взыщете Меня и найдете, если взыщете Меня всем сердцем вашим».</blockquote><cite>Иеремия 29:13</cite></section>
+    <footer>Ночная молитва · Молодёжное служение · План для лидеров</footer>
+  </main>
+</body>
+
+</html>
